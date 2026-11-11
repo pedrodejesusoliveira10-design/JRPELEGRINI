@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JR PELEGRINI | Imóveis no Litoral Sul</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#08172E',
+              blue: '#0E2E5C',
+              lightBlue: '#1E4E8C',
+              gold: '#D4AF37',
+              goldHover: '#B8972E'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    @keyframes pulse-custom {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+      70% { transform: scale(1.06); box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
+    }
+    .wa-pulse {
+      animation: pulse-custom 2s infinite;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans">
+
+  <!-- ================= BARRA SUPERIOR ================= -->
+  <aside aria-label="Informações de contato e financiamento" class="bg-brand-dark text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-4">
+        <span><i class="fa-solid fa-location-dot text-brand-gold mr-1.5"></i> Itanhaém & Peruíbe — Litoral Sul/SP</span>
+        <span class="hidden sm:inline"><i class="fa-solid fa-file-shield text-brand-gold mr-1.5"></i> Financiamento com todos os bancos • Uso do FGTS</span>
+      </div>
+      <a href="https://wa.me/5513974174016?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20JR%20Pelegrini%20e%20gostaria%20de%20informa%C3%A7%C3%B5es." target="_blank" class="hover:text-white flex items-center gap-1.5 font-bold text-brand-gold">
+        <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i> Plantão: (13) 97417-4016
+      </a>
+    </div>
+  </aside>
+
+  <!-- ================= CABEÇALHO / NAVBAR ================= -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 py-3.5 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-brand-blue text-brand-gold rounded-xl flex items-center justify-center font-black text-xl shadow">
+          JP
+        </div>
+        <div>
+          <span class="text-xl font-black tracking-tight text-brand-dark leading-none block">JR PELEGRINI</span>
+          <span class="text-[10px] tracking-widest text-slate-500 uppercase font-semibold">Confiança em Bons Negócios</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
+        <a href="#catalogo" class="hover:text-brand-blue transition">Imóveis &amp; Vídeos</a>
+        <a href="#tabela" class="hover:text-brand-blue transition">Tabela de Preços</a>
+        <a href="#financiamento" class="hover:text-brand-blue transition">Financiamento</a>
+      </nav>
+
+      <a href="https://wa.me/5513974174016?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20o%20plant%C3%A3o%20da%20JR%20Pelegrini." 
+         target="_blank" 
+         class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 py-2 rounded-xl text-sm transition shadow-md shadow-emerald-600/20">
+        <i class="fa-brands fa-whatsapp text-lg"></i>
+        <span>(13) 97417-4016</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="relative bg-gradient-to-br from-brand-dark via-brand-blue to-slate-900 text-white py-16 px-4 text-center overflow-hidden">
+    <div class="max-w-4xl mx-auto relative z-10">
+      <span class="inline-block bg-brand-gold/20 text-brand-gold border border-brand-gold/30 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+        Apresentação de Imóveis • Prontos para Morar
+      </span>
+      <h1 class="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
+        Seu Novo Lar com Piscina e <br class="hidden sm:inline" /> Pertinho da Praia
+      </h1>
+      <p class="mt-4 text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+        Assista aos vídeos demonstrativos de cada casa, veja as fotos de acabamento e consulte os valores com aprovação bancária facilitada.
+      </p>
+
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="#catalogo" class="bg-brand-gold hover:bg-brand-goldHover text-brand-dark font-black px-6 py-3 rounded-xl transition shadow-lg">
+          Ver Imóveis Disponíveis
+        </a>
+        <a href="https://wa.me/5513974174016?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20simula%C3%A7%C3%A3o%20de%20financiamento." target="_blank" class="bg-white/10 hover:bg-white/20 text-white font-bold px-6 py-3 rounded-xl border border-white/20 transition backdrop-blur-sm">
+          Simular pelo WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FILTROS RÁPIDOS ================= -->
+  <section class="max-w-7xl mx-auto px-4 -mt-6 relative z-20">
+    <div class="bg-white rounded-2xl shadow-lg border border-slate-200 p-2 sm:p-3 flex items-center justify-center gap-2 overflow-x-auto hide-scrollbar">
+      <button onclick="filtrarImoveis('todos', this)" class="btn-filtro active bg-brand-blue text-white font-bold text-xs sm:text-sm px-4 py-2 rounded-xl transition whitespace-nowrap">
+        Todos os Imóveis
+      </button>
+      <button onclick="filtrarImoveis('praia', this)" class="btn-filtro bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm px-4 py-2 rounded-xl transition whitespace-nowrap">
+        <i class="fa-solid fa-umbrella-beach text-brand-gold mr-1"></i> A Poucos Metros do Mar
+      </button>
+      <button onclick="filtrarImoveis('altopadrao', this)" class="btn-filtro bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm px-4 py-2 rounded-xl transition whitespace-nowrap">
+        <i class="fa-solid fa-crown text-brand-gold mr-1"></i> Alto Padrão &amp; Condomínio
+      </button>
+      <button onclick="filtrarImoveis('mcmv', this)" class="btn-filtro bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm px-4 py-2 rounded-xl transition whitespace-nowrap">
+        <i class="fa-solid fa-house-chimney text-brand-gold mr-1"></i> Minha Casa Minha Vida
+      </button>
+    </div>
+  </section>
+
+  <!-- ================= CATÁLOGO DE IMÓVEIS INTEGRADO ================= -->
+  <main id="catalogo" class="max-w-7xl mx-auto px-4 py-14 space-y-16">
+
+    <!-- ========== IMÓVEL 1: CIBRATEL 1 (R$ 950.000) ========== -->
+    <article class="card-imovel bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-xl" data-categoria="altopadrao praia">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+        <!-- ÁREA MULTIMÍDIA (VÍDEO / FOTOS) -->
+        <div class="lg:col-span-7 bg-slate-950 p-4 sm:p-6 flex flex-col justify-between">
+          <div>
+            <!-- Seletor interno: Vídeo ou Fotos -->
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-brand-gold/20 text-brand-gold border border-brand-gold/40 text-[11px] font-bold px-3 py-1 rounded-full uppercase">
+                Item 11 da Tabela • 100m da Praia
+              </span>
+              <div class="flex bg-slate-800 rounded-lg p-0.5 text-xs font-semibold">
+                <button onclick="alternarMidia('midia-11', 'video', this)" class="btn-tab active bg-brand-blue text-white px-3 py-1 rounded-md transition">
+                  <i class="fa-solid fa-play mr-1"></i> Vídeo
+                </button>
+                <button onclick="alternarMidia('midia-11', 'fotos', this)" class="btn-tab text-slate-300 hover:text-white px-3 py-1 rounded-md transition">
+                  <i class="fa-regular fa-images mr-1"></i> Fotos
+                </button>
+              </div>
+            </div>
+
+            <!-- Container da Mídia -->
+            <div id="midia-11" class="relative aspect-video rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 flex items-center justify-center">
+              <!-- Player de Vídeo -->
+              <div class="conteudo-video w-full h-full relative">
+                <!-- Se tiver o arquivo local, basta renomear no src="videos/video-cibratel1.mp4" -->
+                <video controls class="w-full h-full object-cover" poster="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80">
+                  <source src="video-cibratel1.mp4" type="video/mp4">
+                  Seu navegador não suporta a tag de vídeo.
+                </video>
+              </div>
+
+              <!-- Galeria de Fotos (Oculta por padrão até clicar na aba Fotos) -->
+              <div class="conteudo-fotos hidden w-full h-full p-2 grid grid-cols-2 gap-2 overflow-y-auto">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" onclick="abrirModal(this.src, 'Fachada do Sobrado no Cibratel 1')" class="cursor-pointer rounded-xl object-cover w-full h-28 hover:opacity-80 transition" alt="Fachada" />
+                <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=600&q=80" onclick="abrirModal(this.src, 'Sala com ambientes integrados')" class="cursor-pointer rounded-xl object-cover w-full h-28 hover:opacity-80 transition" alt="Sala" />
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" onclick="abrirModal(this.src, 'Piscina e área gourmet privativa')" class="cursor-pointer rounded-xl object-cover w-full h-28 hover:opacity-80 transition" alt="Piscina" />
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" onclick="abrirModal(this.src, 'Vista da orla a 100 metros')" class="cursor-pointer rounded-xl object-cover w-full h-28 hover:opacity-80 transition" alt="Praia" />
+              </div>
+            </div>
+          </div>
+
+          <p class="text-[11px] text-slate-400 mt-2 text-center">
+            <i class="fa-solid fa-circle-info text-brand-gold mr-1"></i> Clique nas abas para alternar entre o vídeo do imóvel e as fotos dos cômodos.
+          </p>
+        </div>
+
+        <!-- DETALHES & PREÇO -->
+        <div class="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-brand-lightBlue uppercase tracking-wider">Cibratel 1 • Itanhaém/SP</span>
+              <span class="bg-emerald-100 text-emerald-800 font-bold text-xs px-2.5 py-0.5 rounded-full">Pronta para Morar</span>
+            </div>
+            <h3 class="text-2xl font-black text-brand-dark mt-2">Sobrado Imponente 4 Suítes</h3>
+            <p class="text-slate-500 text-xs mt-1">Rua Frederico Souza Queiroz Filho, 115 (A 100m da praia)</p>
+
+            <!-- Grid de Características -->
+            <div class="grid grid-cols-2 gap-2 mt-5 text-xs text-slate-700">
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-bed text-brand-blue"></i> <span><strong>4</strong> Suítes Amplas</span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-car text-brand-blue"></i> <span><strong>8</strong> Vagas de Garagem</span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-water-ladder text-brand-blue"></i> <span>Piscina 3x4 c/ Cascata</span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-utensils text-brand-blue"></i> <span>Área Gourmet Churrasq.</span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-ruler-combined text-brand-blue"></i> <span>Área Const.: <strong>310 m²</strong></span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-maximize text-brand-blue"></i> <span>Terreno: <strong>360 m²</strong></span></div>
+            </div>
+
+            <p class="text-xs text-slate-500 mt-4 leading-relaxed">
+              Living com 3 ambientes (Estar, Jantar e TV), lavabo, sacada em vidro com terraço panorâmico, escada com jardim de inverno e acabamento impecável.
+            </p>
+          </div>
+
+          <div class="mt-6 pt-5 border-t border-slate-200">
+            <div class="flex items-baseline justify-between mb-3">
+              <div>
+                <span class="text-[11px] text-slate-400 uppercase font-semibold block">Valor de Tabela</span>
+                <span class="text-3xl font-black text-brand-dark">R$ 950.000,00</span>
+              </div>
+              <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-md">Aceita FGTS e Bancos</span>
+            </div>
+            <a href="https://wa.me/5513974174016?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20para%20o%20Sobrado%20no%20Cibratel%201%20(R$%20950.000)."
+               target="_blank"
+               class="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl transition shadow-lg shadow-emerald-600/20 text-sm">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Agendar Visita com Corretor</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <!-- ========== IMÓVEL 2: PERUÍBE CONDOMÍNIO (R$ 930.000) ========== -->
+    <article class="card-imovel bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-xl" data-categoria="altopadrao">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+        <!-- MÍDIA -->
+        <div class="lg:col-span-7 bg-slate-950 p-4 sm:p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-brand-gold/20 text-brand-gold border border-brand-gold/40 text-[11px] font-bold px-3 py-1 rounded-full uppercase">
+                Item 10 da Tabela • Condomínio Fechado
+              </span>
+              <div class="flex bg-slate-800 rounded-lg p-0.5 text-xs font-semibold">
+                <button onclick="alternarMidia('midia-10', 'video', this)" class="btn-tab active bg-brand-blue text-white px-3 py-1 rounded-md transition">
+                  <i class="fa-solid fa-play mr-1"></i> Vídeo
+                </button>
+                <button onclick="alternarMidia('midia-10', 'fotos', this)" class="btn-tab text-slate-300 hover:text-white px-3 py-1 rounded-md transition">
+                  <i class="fa-regular fa-images mr-1"></i> Fotos
+                </button>
+              </div>
+            </div>
+
+            <div id="midia-10" class="relative aspect-video rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 flex items-center justify-center">
+              <div class="conteudo-video w-full h-full relative">
+                <video controls class="w-full h-full object-cover" poster="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80">
+                  <source src="video-peruibe.mp4" type="video/mp4">
+                  Seu navegador não suporta a tag de vídeo.
+                </video>
+              </div>
+              <div class="conteudo-fotos hidden w-full h-full p-2 grid grid-cols-2 gap-2 overflow-y-auto">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80" onclick="abrirModal(this.src, 'Fachada contemporânea - Placa 200')" class="cursor-pointer rounded-xl object-cover w-full h-28 hover:opacity-80 transition" alt="Fachada" />
+                <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" onclick="abrirModal(this.src, 'Cozinha Gourmet c/ Pendentes LED')" class="cursor-pointer rounded-xl object-cover w-full h-28 hover:opacity-80 transition" alt="Cozinha" />
+                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" onclick="abrirModal(this.src, 'Lavabo em Granito Verde Esculpido')" class="cursor-pointer rounded-xl object-cover w-full h-28 hover:opacity-80 transition" alt="Banheiro" />
+                <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=80" onclick="abrirModal(this.src, 'Piscina com Cascata e Área de Deck')" class="cursor-pointer rounded-xl object-cover w-full h-28 hover:opacity-80 transition" alt="Piscina" />
+              </div>
+            </div>
+          </div>
+          <p class="text-[11px] text-slate-400 mt-2 text-center">
+            <i class="fa-solid fa-shield-halved text-brand-gold mr-1"></i> Condomínio fechado com segurança 24h e portaria monitorada.
+          </p>
+        </div>
+
+        <!-- DETALHES -->
+        <div class="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-brand-lightBlue uppercase tracking-wider">Condomínio São Luiz • Peruíbe/SP</span>
+              <span class="bg-amber-100 text-amber-800 font-bold text-xs px-2.5 py-0.5 rounded-full">Alto Padrão</span>
+            </div>
+            <h3 class="text-2xl font-black text-brand-dark mt-2">Casa Térrea 3 Suítes</h3>
+            <p class="text-slate-500 text-xs mt-1">Rua 22, 315 (Placa 200 • Qd M - Lt 15)</p>
+
+            <div class="grid grid-cols-2 gap-2 mt-5 text-xs text-slate-700">
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-crown text-brand-blue"></i> <span><strong>3</strong> Suítes (1 Master c/ Closet)</span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-car text-brand-blue"></i> <span><strong>4</strong> Vagas de Garagem</span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-water-ladder text-brand-blue"></i> <span>Piscina c/ Cascata Inox</span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-gem text-brand-blue"></i> <span>Lavabo Esculpido nobre</span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-ruler-combined text-brand-blue"></i> <span>Área Const.: <strong>180 m²</strong></span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-maximize text-brand-blue"></i> <span>Terreno: <strong>318 m²</strong></span></div>
+            </div>
+
+            <p class="text-xs text-slate-500 mt-4 leading-relaxed">
+              Design moderno em conceito aberto, luminárias em pendentes de anéis de LED, bancada gourmet integrada ao deck, esquadrias pretas e acabamento impecável.
+            </p>
+          </div>
+
+          <div class="mt-6 pt-5 border-t border-slate-200">
+            <div class="flex items-baseline justify-between mb-3">
+              <div>
+                <span class="text-[11px] text-slate-400 uppercase font-semibold block">Valor de Tabela</span>
+                <span class="text-3xl font-black text-brand-dark">R$ 930.000,00</span>
+              </div>
+              <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-md">Financiamento Caixa / Privados</span>
+            </div>
+            <a href="https://wa.me/5513974174016?text=Ol%C3%A1!%20Gostaria%20de%20visitar%20a%20Casa%20no%20Condom%C3%ADnio%20S%C3%A3o%20Luiz%20em%20Peru%C3%ADbe%20(R$%20930.000)."
+               target="_blank"
+               class="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl transition shadow-lg shadow-emerald-600/20 text-sm">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Agendar Visita com Corretor</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <!-- ========== IMÓVEL 3: SUARÃO MOBILIADO (R$ 650.000) ========== -->
+    <article class="card-imovel bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-xl" data-categoria="praia">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+        <!-- MÍDIA -->
+        <div class="lg:col-span-7 bg-slate-950 p-4 sm:p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[11px] font-bold px-3 py-1 rounded-full uppercase">
+                Item 09 da Tabela • 50m da Praia (Mobiliado)
+              </span>
+              <div class="flex bg-slate-800 rounded-lg p-0.5 text-xs font-semibold">
+                <button onclick="alternarMidia('midia-09', 'video', this)" class="btn-tab active bg-brand-blue text-white px-3 py-1 rounded-md transition">
+                  <i class="fa-solid fa-play mr-1"></i> Drone / Vídeo
+                </button>
+                <button onclick="alternarMidia('midia-09', 'fotos', this)" class="btn-tab text-slate-300 hover:text-white px-3 py-1 rounded-md transition">
+                  <i class="fa-regular fa-images mr-1"></i> Fotos
+                </button>
+              </div>
+            </div>
+
+            <div id="midia-09" class="relative aspect-video rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 flex items-center justify-center">
+              <div class="conteudo-video w-full h-full relative">
+                <video controls class="w-full h-full object-cover" poster="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80">
+                  <source src="video-suarao.mp4" type="video/mp4">
+                  Seu navegador não suporta a tag de vídeo.
+                </video>
+              </div>
+              <div class="conteudo-fotos hidden w-full h-full p-2 grid grid-cols-2 gap-2 overflow-y-auto">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" onclick="abrirModal(this.src, 'Área da piscina com ombrelone verde')" class="cursor-pointer rounded-xl object-cover w-full h-28 hover:opacity-80 transition" alt="Piscina Suarão" />
+                <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" onclick="abrirModal(this.src, 'Cozinha equipada com eletros')" class="cursor-pointer rounded-xl object-cover w-full h-28 hover:opacity-80 transition" alt="Cozinha Suarão" />
+                <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=600&q=80" onclick="abrirModal(this.src, 'Quarto montado com cama box')" class="cursor-pointer rounded-xl object-cover w-full h-28 hover:opacity-80 transition" alt="Dormitório Suarão" />
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" onclick="abrirModal(this.src, 'Praia do Suarão a 50m')" class="cursor-pointer rounded-xl object-cover w-full h-28 hover:opacity-80 transition" alt="Praia Suarão" />
+              </div>
+            </div>
+          </div>
+          <p class="text-[11px] text-slate-400 mt-2 text-center">
+            <i class="fa-solid fa-couch text-brand-gold mr-1"></i> Imóvel vendido 100% mobiliado (porteira fechada), pronto para morar ou alugar.
+          </p>
+        </div>
+
+        <!-- DETALHES -->
+        <div class="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-brand-lightBlue uppercase tracking-wider">Suarão • Itanhaém/SP</span>
+              <span class="bg-emerald-100 text-emerald-800 font-bold text-xs px-2.5 py-0.5 rounded-full">100% Mobiliado</span>
+            </div>
+            <h3 class="text-2xl font-black text-brand-dark mt-2">Sobrado a 50m da Praia</h3>
+            <p class="text-slate-500 text-xs mt-1">Rua Sotero Caio de Souza, 81 (Ao lado do mar)</p>
+
+            <div class="grid grid-cols-2 gap-2 mt-5 text-xs text-slate-700">
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-bed text-brand-blue"></i> <span><strong>4</strong> Quartos (2 Suítes)</span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-car text-brand-blue"></i> <span><strong>3</strong> Vagas de Garagem</span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-water-ladder text-brand-blue"></i> <span>Piscina 3x4 c/ Cascata</span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-fire-burner text-brand-blue"></i> <span>Espaço Gourmet Coberto</span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-ruler-combined text-brand-blue"></i> <span>Área Const.: <strong>115 m²</strong></span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-maximize text-brand-blue"></i> <span>Terreno: <strong>150 m²</strong></span></div>
+            </div>
+
+            <p class="text-xs text-slate-500 mt-4 leading-relaxed">
+              Equipado com camas, geladeira frost free, fogão, mesa rústica, espreguiçadeira, ombrelone, churrasqueira privativa e lavabo.
+            </p>
+          </div>
+
+          <div class="mt-6 pt-5 border-t border-slate-200">
+            <div class="flex items-baseline justify-between mb-3">
+              <div>
+                <span class="text-[11px] text-slate-400 uppercase font-semibold block">Valor de Tabela</span>
+                <span class="text-3xl font-black text-brand-dark">R$ 650.000,00</span>
+              </div>
+              <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-md">Pronto para Morar</span>
+            </div>
+            <a href="https://wa.me/5513974174016?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Sobrado%20Mobiliado%20no%20Suar%C3%A3o%20(R$%20650.000)."
+               target="_blank"
+               class="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl transition shadow-lg shadow-emerald-600/20 text-sm">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Agendar Visita com Corretor</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <!-- ========== IMÓVEL 4: CIBRATEL 2 (R$ 410.000) ========== -->
+    <article class="card-imovel bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-xl" data-categoria="praia">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+        <!-- MÍDIA -->
+        <div class="lg:col-span-7 bg-slate-950 p-4 sm:p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-brand-blue text-brand-gold border border-brand-gold/40 text-[11px] font-bold px-3 py-1 rounded-full uppercase">
+                Itens 06 e 07 da Tabela • Lado Praia
+              </span>
+              <div class="flex bg-slate-800 rounded-lg p-0.5 text-xs font-semibold">
+                <button onclick="alternarMidia('midia-06', 'video', this)" class="btn-tab active bg-brand-blue text-white px-3 py-1 rounded-md transition">
+                  <i class="fa-solid fa-play mr-1"></i> Vídeo
+                </button>
+                <button onclick="alternarMidia('midia-06', 'fotos', this)" class="btn-tab text-slate-300 hover:text-white px-3 py-1 rounded-md transition">
+                  <i class="fa-regular fa-images mr-1"></i> Fotos
+                </button>
+              </div>
+            </div>
+
+            <div id="midia-06" class="relative aspect-video rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 flex items-center justify-center">
+              <div class="conteudo-video w-full h-full relative">
+                <video controls class="w-full h-full object-cover" poster="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80">
+                  <source src="video-galania.mp4" type="video/mp4">
+                  Seu navegador não suporta a tag de vídeo.
+                </video>
+              </div>
+              <div class="conteudo-fotos hidden w-full h-full p-2 grid grid-cols-2 gap-2 overflow-y-auto">
+                <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=600&q=80" onclick="abrirModal(this.src, 'Piscina com Cascata e Quintal')" class="cursor-pointer rounded-xl object-cover w-full h-28 hover:opacity-80 transition" alt="Piscina Galânia" />
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" onclick="abrirModal(this.src, 'Sala e Cozinha em Conceito Aberto')" class="cursor-pointer rounded-xl object-cover w-full h-28 hover:opacity-80 transition" alt="Sala Galânia" />
+                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" onclick="abrirModal(this.src, 'Banheiro com Nicho e Espelho Suspenso')" class="cursor-pointer rounded-xl object-cover w-full h-28 hover:opacity-80 transition" alt="Banheiro Galânia" />
+                <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=600&q=80" onclick="abrirModal(this.src, 'Área Gourmet e Churrasqueira')" class="cursor-pointer rounded-xl object-cover w-full h-28 hover:opacity-80 transition" alt="Churrasqueira Galânia" />
+              </div>
+            </div>
+          </div>
+          <p class="text-[11px] text-slate-400 mt-2 text-center">
+            <i class="fa-solid fa-check text-brand-gold mr-1"></i> Duas unidades disponíveis: Rua Galânia, nº 699 e nº 701.
+          </p>
+        </div>
+
+        <!-- DETALHES -->
+        <div class="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-brand-lightBlue uppercase tracking-wider">Cibratel 2 • Itanhaém/SP</span>
+              <span class="bg-blue-100 text-blue-800 font-bold text-xs px-2.5 py-0.5 rounded-full">Lado Praia</span>
+            </div>
+            <h3 class="text-2xl font-black text-brand-dark mt-2">Casa Térrea com Piscina</h3>
+            <p class="text-slate-500 text-xs mt-1">Rua Galânia, 699 e 701 (Lado Praia de Itanhaém)</p>
+
+            <div class="grid grid-cols-2 gap-2 mt-5 text-xs text-slate-700">
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-bed text-brand-blue"></i> <span><strong>3</strong> Dorms (1 Suíte)</span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-car text-brand-blue"></i> <span><strong>2</strong> Vagas de Garagem</span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-water-ladder text-brand-blue"></i> <span>Piscina c/ Cascata Inox</span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-fire-burner text-brand-blue"></i> <span>Churrasqueira e Pia</span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-ruler-combined text-brand-blue"></i> <span>Área Const.: <strong>73 m²</strong></span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-maximize text-brand-blue"></i> <span>Terreno: <strong>150 m²</strong></span></div>
+            </div>
+
+            <p class="text-xs text-slate-500 mt-4 leading-relaxed">
+              Porcelanato polido marmorizado, conceito aberto unindo sala e cozinha americana com pia de granito, banheiro com espelho com alça de couro e acabamento amadeirado.
+            </p>
+          </div>
+
+          <div class="mt-6 pt-5 border-t border-slate-200">
+            <div class="flex items-baseline justify-between mb-3">
+              <div>
+                <span class="text-[11px] text-slate-400 uppercase font-semibold block">Valor de Tabela</span>
+                <span class="text-3xl font-black text-brand-dark">R$ 410.000,00</span>
+              </div>
+              <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-md">Aceita FGTS e Financiamento</span>
+            </div>
+            <a href="https://wa.me/5513974174016?text=Ol%C3%A1!%20Gostaria%20de%20visitar%20a%20Casa%20na%20Rua%20Gal%C3%A2nia%20(R$%20410.000)."
+               target="_blank"
+               class="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl transition shadow-lg shadow-emerald-600/20 text-sm">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Agendar Visita com Corretor</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <!-- ========== IMÓVEL 5: NOVA ITANHAÉM (R$ 280.000) ========== -->
+    <article class="card-imovel bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-xl" data-categoria="mcmv">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+        <!-- MÍDIA -->
+        <div class="lg:col-span-7 bg-slate-950 p-4 sm:p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[11px] font-bold px-3 py-1 rounded-full uppercase">
+                Item 01 da Tabela • Minha Casa Minha Vida
+              </span>
+              <div class="flex bg-slate-800 rounded-lg p-0.5 text-xs font-semibold">
+                <button onclick="alternarMidia('midia-01', 'fotos', this)" class="btn-tab active bg-brand-blue text-white px-3 py-1 rounded-md transition">
+                  <i class="fa-regular fa-images mr-1"></i> Fotos Reais
+                </button>
+              </div>
+            </div>
+
+            <div id="midia-01" class="relative aspect-video rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 flex items-center justify-center">
+              <div class="conteudo-fotos w-full h-full p-2 grid grid-cols-2 gap-2 overflow-y-auto">
+                <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=600&q=80" onclick="abrirModal(this.src, 'Fachada com portão ripado de madeira nº 1690')" class="cursor-pointer rounded-xl object-cover w-full h-28 hover:opacity-80 transition" alt="Fachada 1690" />
+                <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" onclick="abrirModal(this.src, 'Cozinha e sala integradas em conceito aberto')" class="cursor-pointer rounded-xl object-cover w-full h-28 hover:opacity-80 transition" alt="Interior 1690" />
+                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" onclick="abrirModal(this.src, 'Banheiro com detalhe geométrico no box')" class="cursor-pointer rounded-xl object-cover w-full h-28 hover:opacity-80 transition" alt="Banheiro 1690" />
+                <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=600&q=80" onclick="abrirModal(this.src, 'Corredor lateral em pedra e quintal privativo')" class="cursor-pointer rounded-xl object-cover w-full h-28 hover:opacity-80 transition" alt="Quintal 1690" />
+              </div>
+            </div>
+          </div>
+          <p class="text-[11px] text-slate-400 mt-2 text-center">
+            <i class="fa-solid fa-house-chimney text-brand-gold mr-1"></i> Subsídio do programa Minha Casa Minha Vida e uso do FGTS para entrada.
+          </p>
+        </div>
+
+        <!-- DETALHES -->
+        <div class="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-brand-lightBlue uppercase tracking-wider">Nova Itanhaém • Itanhaém/SP</span>
+              <span class="bg-amber-100 text-amber-800 font-bold text-xs px-2.5 py-0.5 rounded-full">MCMV</span>
+            </div>
+            <h3 class="text-2xl font-black text-brand-dark mt-2">Casa Térrea 2 Dormitórios</h3>
+            <p class="text-slate-500 text-xs mt-1">Rua Benedito Ribeiro, 1690-1694 (Lado Morro)</p>
+
+            <div class="grid grid-cols-2 gap-2 mt-5 text-xs text-slate-700">
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-bed text-brand-blue"></i> <span><strong>2</strong> Dormitórios</span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-car text-brand-blue"></i> <span><strong>2</strong> Vagas de Garagem</span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-couch text-brand-blue"></i> <span>Conceito Aberto</span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-tree text-brand-blue"></i> <span>Quintal Privativo nos Fundos</span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-ruler-combined text-brand-blue"></i> <span>Área Const.: <strong>63 m²</strong></span></div>
+              <div class="bg-slate-100 p-2.5 rounded-xl flex items-center gap-2"><i class="fa-solid fa-maximize text-brand-blue"></i> <span>Terreno: <strong>125 m²</strong></span></div>
+            </div>
+
+            <p class="text-xs text-slate-500 mt-4 leading-relaxed">
+              Imóvel novo, sala com janela ampla e cozinha americana com pia de granito, corredor com piso de pedra, ducha externa e acabamento cerâmico de qualidade.
+            </p>
+          </div>
+
+          <div class="mt-6 pt-5 border-t border-slate-200">
+            <div class="flex items-baseline justify-between mb-3">
+              <div>
+                <span class="text-[11px] text-slate-400 uppercase font-semibold block">Valor de Tabela</span>
+                <span class="text-3xl font-black text-brand-dark">R$ 280.000,00</span>
+              </div>
+              <span class="text-xs font-semibold text-amber-600 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-md">Entrada com FGTS</span>
+            </div>
+            <a href="https://wa.me/5513974174016?text=Ol%C3%A1!%20Gostaria%20de%20simular%20o%20financiamento%20da%20Casa%20na%20Rua%20Benedito%20Ribeiro%20(R$%20280.000)."
+               target="_blank"
+               class="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl transition shadow-lg shadow-emerald-600/20 text-sm">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Simular Financiamento no WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+
+  <!-- ================= TABELA DE IMÓVEIS COMPLETA ================= -->
+  <section id="tabela" class="bg-white py-16 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+        <div>
+          <span class="text-xs font-bold text-brand-blue uppercase tracking-wider">Tabela de Imóveis Oficial</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-brand-dark">Grade Completa JR Pelegrini</h2>
+          <p class="text-slate-500 text-xs sm:text-sm mt-1">Comissão de 6% sobre valor de tabela para corretores parceiros.</p>
+        </div>
+        <a href="https://wa.me/5513974174016?text=Ol%C3%A1!%20Gostaria%20de%20receber%20a%20tabela%20em%20PDF%20dos%20im%C3%B3veis." target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold px-4 py-2.5 rounded-xl text-xs transition border border-slate-200">
+          <i class="fa-solid fa-file-pdf text-rose-600"></i> Pedir Tabela via WhatsApp
+        </a>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl shadow border border-slate-200">
+        <table class="w-full text-left text-sm text-slate-600">
+          <thead class="bg-brand-dark text-white text-xs uppercase font-bold">
+            <tr>
+              <th class="py-3 px-4">Nº</th>
+              <th class="py-3 px-4">Endereço / Localização</th>
+              <th class="py-3 px-4">Informações do Imóvel</th>
+              <th class="py-3 px-4">Terreno / Constr.</th>
+              <th class="py-3 px-4">Valor / Prazo</th>
+              <th class="py-3 px-4 text-center">Ação</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 font-medium">
+            <tr class="hover:bg-slate-50">
+              <td class="py-3 px-4 font-bold text-brand-dark">01</td>
+              <td class="py-3 px-4 font-semibold text-slate-800">Rua Benedito Ribeiro, 1690-1694 <span class="block text-xs font-normal text-slate-400">Nova Itanhaém • Lado Morro</span></td>
+              <td class="py-3 px-4 text-xs">2 dormitórios, sala, cozinha, banheiro e garagem</td>
+              <td class="py-3 px-4 text-xs">125 m² / 63 m²</td>
+              <td class="py-3 px-4 font-bold text-brand-blue">R$ 280.000,00</td>
+              <td class="py-3 px-4 text-center"><a href="https://wa.me/5513974174016?text=Ol%C3%A1!%20Interesse%20no%20im%C3%B3vel%2001%20(R$%20280.000)" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-3 py-1.5 rounded-lg inline-block">Consultar</a></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="py-3 px-4 font-bold text-brand-dark">02</td>
+              <td class="py-3 px-4 font-semibold text-slate-800">Rua Osvaldo Alves de Freitas, 1521 <span class="block text-xs font-normal text-slate-400">Jd. Lindomar • Lado Praia</span></td>
+              <td class="py-3 px-4 text-xs">2 dorms (1 suíte), piscina cascata, churrasq., garagem</td>
+              <td class="py-3 px-4 text-xs">130 m² / 80 m²</td>
+              <td class="py-3 px-4 font-bold text-brand-blue">R$ 320.000,00 <span class="block text-[10px] text-amber-600 font-normal">Prazo: 90 dias</span></td>
+              <td class="py-3 px-4 text-center"><a href="https://wa.me/5513974174016?text=Ol%C3%A1!%20Interesse%20no%20im%C3%B3vel%2002%20(R$%20320.000)" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-3 py-1.5 rounded-lg inline-block">Consultar</a></td>
+            </tr>
+            <tr class="bg-rose-50/70">
+              <td class="py-3 px-4 font-bold text-brand-dark">03</td>
+              <td class="py-3 px-4 font-semibold text-slate-800">Rua Itaboca, 228 <span class="block text-xs font-normal text-slate-400">Balneário Tupy • Lado Praia</span></td>
+              <td class="py-3 px-4 text-xs">2 dorms (1 suíte), piscina cascata, área gourmet</td>
+              <td class="py-3 px-4 text-xs">125 m² / 63 m²</td>
+              <td class="py-3 px-4"><span class="bg-rose-600 text-white font-bold text-[10px] px-2 py-0.5 rounded">VENDIDO</span></td>
+              <td class="py-3 px-4 text-center text-xs font-bold text-slate-400">Indisponível</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="py-3 px-4 font-bold text-brand-dark">04</td>
+              <td class="py-3 px-4 font-semibold text-slate-800">Rua Milton Martins Poitena, 1180 <span class="block text-xs font-normal text-slate-400">Jamaica • Lado Praia</span></td>
+              <td class="py-3 px-4 text-xs">2 dorms (1 suíte), piscina cascata, 5 vagas</td>
+              <td class="py-3 px-4 text-xs">230 m² / 80 m²</td>
+              <td class="py-3 px-4 font-bold text-brand-blue">R$ 360.000,00 <span class="block text-[10px] text-slate-400 font-normal">Em negociação</span></td>
+              <td class="py-3 px-4 text-center"><a href="https://wa.me/5513974174016?text=Ol%C3%A1!%20Interesse%20no%20im%C3%B3vel%2004%20(R$%20360.000)" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-3 py-1.5 rounded-lg inline-block">Consultar</a></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="py-3 px-4 font-bold text-brand-dark">05</td>
+              <td class="py-3 px-4 font-semibold text-slate-800">Rua Carlos João Donner, 1190 <span class="block text-xs font-normal text-slate-400">Balneário Tupy • Lado Praia</span></td>
+              <td class="py-3 px-4 text-xs">3 dorms (1 suíte), portão aut., piscina cascata</td>
+              <td class="py-3 px-4 text-xs">160 m² / 120 m²</td>
+              <td class="py-3 px-4 font-bold text-brand-blue">R$ 400.000,00 <span class="block text-[10px] text-amber-600 font-normal">Prazo: 30 dias</span></td>
+              <td class="py-3 px-4 text-center"><a href="https://wa.me/5513974174016?text=Ol%C3%A1!%20Interesse%20no%20im%C3%B3vel%2005%20(R$%20400.000)" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-3 py-1.5 rounded-lg inline-block">Consultar</a></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="py-3 px-4 font-bold text-brand-dark">06/07</td>
+              <td class="py-3 px-4 font-semibold text-slate-800">Rua Galânia, 699 e 701 <span class="block text-xs font-normal text-slate-400">Cibratel 2 • Lado Praia</span></td>
+              <td class="py-3 px-4 text-xs">3 dorms (1 suíte), piscina cascata, churrasq., 2 vagas</td>
+              <td class="py-3 px-4 text-xs">150 m² / 73 m²</td>
+              <td class="py-3 px-4 font-bold text-brand-blue">R$ 410.000,00</td>
+              <td class="py-3 px-4 text-center"><a href="https://wa.me/5513974174016?text=Ol%C3%A1!%20Interesse%20na%20Rua%20Gal%C3%A2nia%20(R$%20410.000)" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-3 py-1.5 rounded-lg inline-block">Consultar</a></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="py-3 px-4 font-bold text-brand-dark">08</td>
+              <td class="py-3 px-4 font-semibold text-slate-800">Rua Carlos João Donner, 1187 <span class="block text-xs font-normal text-slate-400">Balneário Tupy • Lado Praia</span></td>
+              <td class="py-3 px-4 text-xs">Sobrado 3 dorms (1 suíte), portão aut., piscina</td>
+              <td class="py-3 px-4 text-xs">205 m² / 120 m²</td>
+              <td class="py-3 px-4 font-bold text-brand-blue">R$ 460.000,00 <span class="block text-[10px] text-amber-600 font-normal">Prazo: 30 dias</span></td>
+              <td class="py-3 px-4 text-center"><a href="https://wa.me/5513974174016?text=Ol%C3%A1!%20Interesse%20no%20Sobrado%2008%20(R$%20460.000)" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-3 py-1.5 rounded-lg inline-block">Consultar</a></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="py-3 px-4 font-bold text-brand-dark">09</td>
+              <td class="py-3 px-4 font-semibold text-slate-800">Rua Sotero Caio de Souza, 81 <span class="block text-xs font-normal text-slate-400">Suarão • 50 m da Praia</span></td>
+              <td class="py-3 px-4 text-xs">Sobrado mobiliado, 4 quartos (2 suítes), piscina</td>
+              <td class="py-3 px-4 text-xs">150 m² / 115 m²</td>
+              <td class="py-3 px-4 font-bold text-brand-blue">R$ 650.000,00</td>
+              <td class="py-3 px-4 text-center"><a href="https://wa.me/5513974174016?text=Ol%C3%A1!%20Interesse%20no%20Sobrado%20Suar%C3%A3o%20(R$%20650.000)" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-3 py-1.5 rounded-lg inline-block">Consultar</a></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="py-3 px-4 font-bold text-brand-dark">10</td>
+              <td class="py-3 px-4 font-semibold text-slate-800">Rua 22, 315 <span class="block text-xs font-normal text-slate-400">Condomínio São Luiz • Peruíbe</span></td>
+              <td class="py-3 px-4 text-xs">Casa térrea 3 suítes (1 master), piscina, gourmet, 4 vagas</td>
+              <td class="py-3 px-4 text-xs">318 m² / 180 m²</td>
+              <td class="py-3 px-4 font-bold text-brand-blue">R$ 930.000,00</td>
+              <td class="py-3 px-4 text-center"><a href="https://wa.me/5513974174016?text=Ol%C3%A1!%20Interesse%20na%20Casa%20em%20Peru%C3%ADbe%20(R$%20930.000)" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-3 py-1.5 rounded-lg inline-block">Consultar</a></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="py-3 px-4 font-bold text-brand-dark">11</td>
+              <td class="py-3 px-4 font-semibold text-slate-800">Rua Frederico Souza Queiroz Filho, 115 <span class="block text-xs font-normal text-slate-400">Cibratel 1 • 100 m da Praia</span></td>
+              <td class="py-3 px-4 text-xs">Sobrado 4 suítes, 8 vagas, piscina 3x4, gourmet</td>
+              <td class="py-3 px-4 text-xs">360 m² / 310 m²</td>
+              <td class="py-3 px-4 font-bold text-brand-blue">R$ 950.000,00</td>
+              <td class="py-3 px-4 text-center"><a href="https://wa.me/5513974174016?text=Ol%C3%A1!%20Interesse%20no%20Sobrado%20Cibratel%201%20(R$%20950.000)" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-3 py-1.5 rounded-lg inline-block">Consultar</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SEÇÃO DE FINANCIAMENTO ================= -->
+  <section id="financiamento" class="py-16 max-w-7xl mx-auto px-4">
+    <div class="bg-gradient-to-r from-brand-blue to-brand-dark rounded-3xl p-8 sm:p-12 text-white">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="bg-brand-gold/20 text-brand-gold border border-brand-gold/40 text-xs font-bold px-3 py-1 rounded-full uppercase">
+          Crédito Imobiliário Facilitado
+        </span>
+        <h3 class="text-2xl sm:text-3xl font-black mt-3">Compre com Entrada de FGTS e Financiamento</h3>
+        <p class="text-slate-300 text-sm mt-2">Nossa equipe faz toda a aprovação de crédito e trâmites com a Caixa e bancos privados para você.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
+          <i class="fa-solid fa-calculator text-brand-gold text-3xl mb-3"></i>
+          <h4 class="font-bold text-lg">Simulação Gratuita</h4>
+          <p class="text-slate-300 text-xs mt-1">Descubra na hora o valor das parcelas e o potencial de financiamento da sua renda.</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
+          <i class="fa-solid fa-coins text-brand-gold text-3xl mb-3"></i>
+          <h4 class="font-bold text-lg">Utilize seu FGTS</h4>
+          <p class="text-slate-300 text-xs mt-1">Abata o valor da entrada ou amortize as parcelas mensais com saldo de contas ativas ou inativas.</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
+          <i class="fa-solid fa-shield-halved text-brand-gold text-3xl mb-3"></i>
+          <h4 class="font-bold text-lg">Documentação 100% Ok</h4>
+          <p class="text-slate-300 text-xs mt-1">Escrituras, habite-se e matrícula individualizada para transferência rápida e segura.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MODAL / LIGHTBOX ================= -->
+  <div id="modal-midia" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="relative max-w-4xl w-full bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl">
+      <button onclick="fecharModal()" class="absolute top-3 right-3 text-white bg-slate-800/80 hover:bg-slate-700 w-10 h-10 rounded-full flex items-center justify-center z-10 transition">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+      <div class="p-2">
+        <img id="modal-img" src="" alt="Mídia ampliada" class="w-full max-h-[80vh] object-contain mx-auto rounded-xl" />
+      </div>
+      <div class="p-4 bg-slate-950 border-t border-slate-800 flex items-center justify-between">
+        <p id="modal-legenda" class="text-slate-200 text-sm font-semibold"></p>
+        <a href="https://wa.me/5513974174016?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20essa%20casa." target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2 rounded-lg transition inline-flex items-center gap-1.5">
+          <i class="fa-brands fa-whatsapp text-sm"></i> Falar sobre este imóvel
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= BOTÃO FLUTUANTE DO WHATSAPP ================= -->
+  <a href="https://wa.me/5513974174016?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20JR%20Pelegrini%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20dos%20im%C3%B3veis."
+     target="_blank"
+     title="Plantão de Vendas no WhatsApp"
+     class="fixed bottom-6 right-6 z-40 bg-[#25D366] hover:bg-[#20ba5a] text-white p-4 sm:px-5 sm:py-3.5 rounded-full shadow-2xl flex items-center gap-2.5 wa-pulse transition">
+    <i class="fa-brands fa-whatsapp text-3xl sm:text-2xl"></i>
+    <span class="hidden sm:inline font-bold text-sm">Plantão (13) 97417-4016</span>
+  </a>
+
+  <!-- ================= RODAPÉ ================= -->
+  <footer class="bg-brand-dark text-slate-400 py-12 px-4 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+      <div>
+        <span class="text-white font-extrabold text-base block">JR PELEGRINI</span>
+        <p class="text-slate-400 mt-0.5">Confiança em Bons Negócios • Imóveis em Itanhaém e Peruíbe/SP</p>
+      </div>
+      <div>
+        <p class="text-slate-200 font-semibold text-sm">
+          <i class="fa-brands fa-whatsapp text-emerald-400 mr-1.5"></i> WhatsApp: (13) 97417-4016
+        </p>
+        <p class="text-slate-400 mt-1">Material para divulgação a clientes e corretores parceiros.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= JAVASCRIPT INTEGRADO ================= -->
+  <script>
+    // Alternar entre aba de Vídeo e Fotos dentro de cada card
+    function alternarMidia(containerId, tipo, btn) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+      
+      const conteudoVideo = container.querySelector('.conteudo-video');
+      const conteudoFotos = container.querySelector('.conteudo-fotos');
+      const botoes = btn.parentElement.querySelectorAll('.btn-tab');
+
+      botoes.forEach(b => {
+        b.classList.remove('active', 'bg-brand-blue', 'text-white');
+        b.classList.add('text-slate-300');
+      });
+      btn.classList.add('active', 'bg-brand-blue', 'text-white');
+      btn.classList.remove('text-slate-300');
+
+      if (tipo === 'video') {
+        conteudoVideo.classList.remove('hidden');
+        conteudoFotos.classList.add('hidden');
+      } else {
+        conteudoVideo.classList.add('hidden');
+        conteudoFotos.classList.remove('hidden');
+      }
+    }
+
+    // Modal de Foto Ampliada
+    function abrirModal(src, legenda) {
+      const modal = document.getElementById('modal-midia');
+      const img = document.getElementById('modal-img');
+      const leg = document.getElementById('modal-legenda');
+      img.src = src;
+      leg.innerText = legenda;
+      modal.classList.remove('hidden');
+    }
+
+    function fecharModal() {
+      const modal = document.getElementById('modal-midia');
+      modal.classList.add('hidden');
+    }
+
+    // Fechar ao clicar fora do conteúdo
+    document.getElementById('modal-midia').addEventListener('click', function(e) {
+      if (e.target === this) {
+        fecharModal();
+      }
+    });
+
+    // Filtro por Categoria de Imóvel
+    function filtrarImoveis(categoria, btn) {
+      const cards = document.querySelectorAll('.card-imovel');
+      const botoes = document.querySelectorAll('.btn-filtro');
+
+      botoes.forEach(b => {
+        b.classList.remove('active', 'bg-brand-blue', 'text-white');
+        b.classList.add('bg-slate-100', 'text-slate-700');
+      });
+      btn.classList.add('active', 'bg-brand-blue', 'text-white');
+      btn.classList.remove('bg-slate-100', 'text-slate-700');
+
+      cards.forEach(card => {
+        const catCard = card.getAttribute('data-categoria');
+        if (categoria === 'todos' || catCard.includes(categoria)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
